@@ -20,7 +20,7 @@ async def ssh_handle():
                 verbose=print)
 
     await server.start_server(args)
-    print("server started in socks5://127.0.0.1:8081")
+    print("server started in "+local_listen)
     await asyncio.sleep(1)
     return "done"
 
