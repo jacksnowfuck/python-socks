@@ -4,8 +4,13 @@ import asyncio
 import pproxy
 import configparser
 import win32timezone
+import sys
 
 loop = asyncio.get_event_loop()
+
+logfile = open('run.log', 'a', encoding='utf-8')
+sys.stdout = logfile
+sys.stderr = logfile
 
 file = 'config.ini'
 con = configparser.ConfigParser()
